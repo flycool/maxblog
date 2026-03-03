@@ -395,7 +395,7 @@ export async function handleBuild(argv) {
           status >= 200 && status < 300
             ? styleText("green", `[${status}]`)
             : styleText("red", `[${status}]`)
-        console.log(statusString + styleText("grey", ` ${argv.baseDir}${req.url}`))
+        //console.log(statusString + styleText("grey", ` ${argv.baseDir}${req.url}`))
         release()
       }
 
@@ -482,7 +482,7 @@ export async function handleBuild(argv) {
       .on("change", () => build(clientRefresh))
       .on("unlink", () => build(clientRefresh))
 
-    console.log(styleText("grey", "hint: exit with ctrl+c"))
+    //console.log(styleText("grey", "hint: exit with ctrl+c"))
   }
 }
 
